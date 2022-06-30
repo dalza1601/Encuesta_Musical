@@ -22,7 +22,7 @@ public class QuizController {
         try {
             return ResponseHandler.generateResponse(HttpStatus.OK, false, "", quizService.saveQuiz(quiz));
         } catch (Exception e) {
-            return ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, true, ConstantHelper.TRY_AGAIN, null);
+            return ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, true, ConstantHelper.UNIQUE_VALUE, null);
         }
     }
 
@@ -42,7 +42,7 @@ public class QuizController {
             return ResponseHandler.generateResponse(HttpStatus.OK, false, "", quizService.updateQuiz(
                     quiz, quizId));
         } catch (Exception e) {
-            return ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, true, ConstantHelper.TRY_AGAIN, null);
+            return ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, true, ConstantHelper.UNIQUE_VALUE, null);
 
         }
 
